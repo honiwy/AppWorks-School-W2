@@ -9,4 +9,5 @@
     \n4. Optimize image processing algorithm from 1 image/min to 20 images/min
     \n5. Provide product knowledge training for local and international clients
     \n6. Mentor summer interns in software development and design</string>
+    <string name="what_is_your_nickname">What is your nickname</string>
 </resources>
