@@ -1,0 +1,36 @@
+Answer ​Q1​ to ​Q6​ in any text file. Upload the Android project includes ​Q7​ and the text file 
+(​Q1to ​Q6​) to your GitHub and ​send a direct message to us that you have completed.
+
+1. What is ​Inheritance​? Try to explain in Mandarin.
+A: 舉例來說開設一間電影院，可以建立一個class稱作顧客,其property可以包含電影票卷級別,年齡,消費金額等
+這時候可以用一個class稱為未成年顧客來繼承顧客這個class,
+當今天var john=new 未成年顧客("限制級",12,250)時,可以跳出messagebox提醒售票人員不該售出該電影票,
+以及消費金額因為是學生的關係可以把八折等等去override原先計算票價的公式
+
+2. How to ​split​ a string in Android? Explain your understanding, and even better to attachsome sample code
+A: 可以使用\n做換行 例如:var str1="今天是星期天\n外面天氣真好\n公園很多人在散著步"
+   或者var str2="今天是星期天, 外面天氣真好, 公園很多人在散著步"然後使用:
+   String[] phrases = str2.split(",");
+   for (String phrase : phrases)
+   { System.out.println("phrase = " + phrase); }
+
+3. What kind of ​key-value​ pair collection we use in Android? Attach a sample code that use for-loop to print each key-value pair.
+A: 要使用字典相關的形式儲存資料時即可以使用:
+    var pairList = listOf(Pair( "A","Apple"),Pair("B","Banana"),Pair("C","Cranberry"),Pair("D","Dragon Fruit"))
+    for (fruit in pairList) {
+        println("The first letter of " +fruit.second +" is "+fruit.first)
+    }
+
+4. What’s the ​difference​ between ArrayList and LinkedList? Try to explain in Mandarin
+A: ArrayList是陣列形式比較適合用來儲存及資料的提取,而LinkedList比較適合用在資料操作頻繁的時候
+   因為今天刪除ArrayList中某一個位置的資料時,後方所有資料都會往前移動。LinkedList只要將刪除的前一位置與後一位置資料連接起來即可
+   但是在資料提取的時候可以很快速抓取ArrayList第300格儲存的資料,LinkedList則需要透過鏈接一個個移到第300個位置來取得資料
+
+5. What are ​Value Type​ variables? List out the Value Type variables you know
+A: Value type表示進入function時傳入變數的值去做後續運算，運算結果並"不會"影響原始記憶體位置儲存該變數的數值
+   另一種形式叫做Reference type在進入function時"會"在運算過程中改變儲存該變數的記憶體位置的數值
+   常見的value type像是byte, int, float, double這些
+
+6. What’s the ​maximum​ value of ​Int​? 
+If you want to represent integers larger than the limit,what should you do instead of using int variables?
+A: Int的最大值為: 2,147,483,647。如果要表達大於int可呈現的極限之數值,我覺得可以使用科學符號e來作呈現,而運算部分可以先使用long去做運算
